@@ -3,6 +3,7 @@
  */
 public class InsertAtHead {
 
+  //create a newnode
     static class node{
         int data;
         node next;
@@ -14,10 +15,17 @@ public class InsertAtHead {
     }
 
     public static node insertAtHeading(node head,int val){
+        //Task 1: create a new node;
         node newnode = new node(val);
+
+        //Task2: new node ke next mein head daal do;
         newnode.next = head;
+
+        //Task 3: update head;
         head = newnode;
-        return newnode;
+
+        //Task 4 : return head;
+        return head;
     }
 
     public static void traverse(node head){
@@ -35,8 +43,6 @@ public class InsertAtHead {
         head = insertAtHeading(head,14);
         head = insertAtHeading(head,15);
 
-        traverse(head);
-
-        
+        traverse(head); 
     }
 }
